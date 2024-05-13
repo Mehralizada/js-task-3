@@ -155,4 +155,34 @@ var netice = tap(soz);
 
 console.log("Sait sayi:", netice.saitler);
 console.log("Samit sayi:", netice.samitler);
+
+//12.Daxil olunmuş ədədin mükəmməl ədəd olub olmadığını yoxlayan
+//metod yaradın (Mükəmməl ədəd ədədin özündən başqa qalan bütün
+//    tam bölənlərinin cəmi özünə bərabər olan ədədə deyilir - məs:
+//    6=1+2+3; 28=1+2+4+7+14)
+function mükemmel(eded) {
+    var tam = 0;
+ 
+    for (var i = 1; i <= eded / 2; i++) {
+        if (eded % i === 0) {
+            tam += i;
+        }
+    }
+    
+    if (tam === eded && tam !== 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+var eded = 28;
+
+var netice = mükemmel(eded);
+
+if (netice) {
+    console.log(eded + " mükemmel eded.");
+} else {
+    console.log(eded + " mükemmel eded deyil.");
+}
 */
